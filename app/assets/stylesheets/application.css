@@ -8,3 +8,31 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+.todo {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+}
+
+.todo--high-priority {
+  border-color: #c2410c;
+  background-color: #fff7ed;
+}
+
+.todo__badge {
+  display: inline-block;
+  margin: 0;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #9a3412;
+  background-color: #ffedd5;
+  border-radius: 9999px;
+}
+
+.todo__priority-toggle {
+  font: inherit;
+  cursor: pointer;
+}
