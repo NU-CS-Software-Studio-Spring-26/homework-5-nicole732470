@@ -45,4 +45,11 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to todos_url
   end
+
+  test "todo high_priority toggle responds with turbo stream" do
+    patch toggle_high_priority_todo_url(@todo), as: :turbo_stream
+
+    assert_response :success
+    assert_equal "text/vnd.turbo-stream.html", response.media_type
+  end
 end
