@@ -1,0 +1,10 @@
+---
+description: Rails 8 conventions for the sample todo app
+alwaysApply: true
+---
+
+- Prefer Turbo Streams over custom JavaScript.
+- Keep migrations reversible.
+- Use strong parameters.
+- Use Rails generators for boilerplate.
+- Keep the schema scoped to this todo app.

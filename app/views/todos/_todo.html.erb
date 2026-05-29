@@ -1,7 +1,23 @@
-<div id="<%= dom_id todo %>">
+<div id="<%= dom_id todo %>" class="todo<%= " todo--high-priority" if todo.high_priority? %>">
   <p>
     <strong>Description:</strong>
     <%= todo.description %>
   </p>
 
+  <% if todo.high_priority? %>
+    <p class="todo__badge">High priority</p>
+  <% end %>
+
+  <p>
+    <%= button_to toggle_high_priority_todo_path(todo),
+                  method: :patch,
+                  form: { data: { turbo_stream: true } },
+                  class: "todo__priority-toggle" do %>
+      <% if todo.high_priority? %>
+        ★ High priority
+      <% else %>
+        ☆ Mark high priority
+      <% end %>
+    <% end %>
+  </p>
 </div>

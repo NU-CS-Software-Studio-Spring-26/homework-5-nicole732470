@@ -1,0 +1,10 @@
+---
+description: Security rules for Rails changes
+alwaysApply: true
+---
+
+- Never write, log, or echo secrets, API keys, or production credentials.
+- Do not use eval on user input.
+- Do not use html_safe or raw on untrusted input.
+- Use parameterized queries instead of interpolated SQL.
+- Do not disable CSRF protection or session checks.
